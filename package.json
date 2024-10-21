@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon backend/index.js"
+    "start": "nodemon backend/index.js",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
