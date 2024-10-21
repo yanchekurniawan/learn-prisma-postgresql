@@ -21,8 +21,9 @@ app.get("/products", async (req, res) => {
 
 app.post("/products", async (req, res) => {
   const { name, price, description } = req.body;
+  console.log(name, price, description);
   await prisma.product.createMany({
-    data: [name, price, description],
+    data: { name, price, description },
   });
   res.json("Product Added");
 });
